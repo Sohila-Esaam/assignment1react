@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .iconStyle{
+        @apply mx-2 border rounded-full w-8 h-8 flex items-center justify-center
+    }
+    .inputStyle{
+        @apply border-t-0 border-l-0 border-r-0 border-[#dee2e6] mb-4 focus:ring-0 focus:border-[#dee2e6]
+    }
+    
+    .active{
+       @apply bg-main-color text-white py-2 px-3 rounded-md
+    }
+    .item-inner{
+        @apply absolute top-0 left-0 w-full h-full bg-[#1abc9ccd] text-white flex justify-center items-center;
+        opacity: 0;
+        transition: all 1s;
+    }
+    .item{
+        @apply rounded-lg overflow-hidden relative;
+    }
+    .item:hover .item-inner{
+        opacity: 1;
+    }
+    .inner-box{
+        width: 50%;
+        height: 70vh;    
+    }
+    .layer{
+        @apply  items-center justify-center h-screen fixed top-0 left-0 right-0 bottom-0 bg-[#00000097];
+        z-index: 999999;
+    }
+}
